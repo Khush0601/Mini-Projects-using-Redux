@@ -1,0 +1,59 @@
+.to-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: lightcyan;
+   
+    display: flex;
+}
+.input-container{
+    width: 24vw;
+    height: 40vh;
+    background-color: rgb(135, 181, 84);
+}
+.input-container>form>input{
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+}
+.input-container>form>button{
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+}
+.todoTask{
+    width: 24vw;
+    min-height: 40vh;
+    background-color: rgb(220, 184, 95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.todoTask-Box{
+    width: 17vw;
+    height: 10vh;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    margin: 3px;
+}
+.todoTask-Box>button{
+    width: 60px;
+    height: 40px;
+    margin: 4px;
+}
+.ProgressTask{
+    width: 24vw;
+    min-height: 40vh;
+    background-color: rgb(78, 189, 91); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.completedTask{
+    width: 24vw;
+    min-height: 40vh;
+    background-color: rgb(46, 48, 162); 
+}
