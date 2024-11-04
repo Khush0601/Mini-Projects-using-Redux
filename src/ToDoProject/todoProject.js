@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './todoProject.css'
 import {  useDispatch, useSelector } from 'react-redux'
-import {  onCompletedBackClick, onFormUpdate, onNextClick, onProgressBackClick, onProgressNextClick } from './todoSlice'
+import {  onCompletedBackClick, onFormUpdate, onNextClick, onProgressBackClick, onProgressNextClick,onDeleteClick } from './todoSlice'
 const TodoProject = () => {
     const [inputUpdate,setInputUpdate]=useState('')
     const onInputUpdate=(e)=>{
@@ -33,7 +33,7 @@ const TodoProject = () => {
         return  <div className='todoTask-Box' key={i}>
               <h3>{el}</h3>
               <button onClick={()=>dispatch(onNextClick(el))}>Next</button>
-              <button>Delete</button>
+              <button onClick={()=>dispatch(onDeleteClick(el))}>Delete</button>
         </div>
        })}
        </div>

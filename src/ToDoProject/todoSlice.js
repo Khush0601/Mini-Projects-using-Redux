@@ -13,6 +13,11 @@ const todoProjectSlice=createSlice({
        
        
       },
+      onDeleteClick:(state,{payload})=>{
+      state.todoTask=[...state.todoTask]
+      let filteredTask=state.todoTask.filter((el,i)=>el!==payload)
+      state.todoTask=filteredTask
+      },
       onNextClick:(state,{payload})=>{
        state.progressTask=[...state.progressTask,payload]
        let filteredTodo=state.todoTask.filter((val,i)=>val!==payload)
@@ -36,5 +41,5 @@ const todoProjectSlice=createSlice({
      
     }
 })
-export let{onFormUpdate,onNextClick,onProgressNextClick,onProgressBackClick,onCompletedBackClick}=todoProjectSlice.actions
+export let{onFormUpdate,onNextClick,onProgressNextClick,onProgressBackClick,onCompletedBackClick,onDeleteClick}=todoProjectSlice.actions
 export  default todoProjectSlice.reducer
